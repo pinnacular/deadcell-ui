@@ -4,7 +4,7 @@ local settings = {
     default_accent = Color3.fromRGB(61, 100, 227); -- also stupid shit
 };
 
-local drawing = loadstring(game:HttpGet("https://gist.githubusercontent.com/notportal/043d5c6024b9307e6fa39e090df4f93e/raw/457097fcf289cff78073046e924ac19c928e9d66/extension.lua"))();
+--local drawing = loadstring(game:HttpGet("https://gist.githubusercontent.com/notportal/043d5c6024b9307e6fa39e090df4f93e/raw/457097fcf289cff78073046e924ac19c928e9d66/extension.lua"))();
 local tween = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/utility/main/Tween.lua"))()
 
 -- // UI LIBRARY
@@ -181,7 +181,7 @@ library.gradient = images.gradient90 --decode("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKC
 library.utility = utility
 
 function utility.outline(obj, color)
-    local outline = drawing:new("Square")
+    local outline = Drawing:new("Square")
     outline.Parent = obj
     outline.Size = UDim2.new(1, 2, 1, 2)
     outline.Position = UDim2.new(0, -1, 0, -1)
@@ -202,7 +202,7 @@ function utility.outline(obj, color)
 end
 
 function utility.create(class, properties)
-    local obj = drawing:new(class)
+    local obj = Drawing:new(class)
 
     for prop, v in next, properties do
         if prop == "Theme" then
