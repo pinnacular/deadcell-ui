@@ -181,7 +181,7 @@ library.gradient = images.gradient90 --decode("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKC
 library.utility = utility
 
 function utility.outline(obj, color)
-    local outline = Drawing:new("Square")
+    local outline = Drawing:New("Square")
     outline.Parent = obj
     outline.Size = UDim2.new(1, 2, 1, 2)
     outline.Position = UDim2.new(0, -1, 0, -1)
