@@ -202,7 +202,7 @@ function utility.outline(obj, color)
 end
 
 function utility.create(class, properties)
-    local obj = Drawing:new(class)
+    local obj = Drawing:New(class)
 
     for prop, v in next, properties do
         if prop == "Theme" then
