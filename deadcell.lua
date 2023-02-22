@@ -181,7 +181,7 @@ library.gradient = images.gradient90 --decode("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKC
 library.utility = utility
 
 function utility.outline(obj, color)
-    local outline = Drawing:New("Square")
+    local outline = Drawing.new("Square")
     outline.Parent = obj
     outline.Size = UDim2.new(1, 2, 1, 2)
     outline.Position = UDim2.new(0, -1, 0, -1)
@@ -202,7 +202,7 @@ function utility.outline(obj, color)
 end
 
 function utility.create(class, properties)
-    local obj = Drawing:New(class)
+    local obj = Drawing.new(class)
 
     for prop, v in next, properties do
         if prop == "Theme" then
